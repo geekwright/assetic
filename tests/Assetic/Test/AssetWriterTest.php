@@ -14,7 +14,7 @@ namespace Assetic\Test;
 use Assetic\Asset\FileAsset;
 use Assetic\AssetWriter;
 
-class AssetWriterTest extends \PHPUnit_Framework_TestCase
+class AssetWriterTest extends \PHPUnit\Framework\TestCase
 {
     private $dir;
     /** @var AssetWriter */

@@ -17,7 +17,7 @@ use Assetic\Filter\MinifyCssCompressorFilter;
 /**
  * @group integration
  */
-class MinifyCssCompressorFilterTest extends \PHPUnit_Framework_TestCase
+class MinifyCssCompressorFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {

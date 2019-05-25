@@ -17,7 +17,7 @@ use Assetic\Filter\CssMinFilter;
 /**
  * @group integration
  */
-class CssMinFilterTest extends \PHPUnit_Framework_TestCase
+class CssMinFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {

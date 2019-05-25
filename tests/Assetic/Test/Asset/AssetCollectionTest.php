@@ -16,7 +16,7 @@ use Assetic\Asset\FileAsset;
 use Assetic\Asset\AssetCollection;
 use Assetic\Filter\CallablesFilter;
 
-class AssetCollectionTest extends \PHPUnit_Framework_TestCase
+class AssetCollectionTest extends \PHPUnit\Framework\TestCase
 {
     public function testInterface()
     {
@@ -174,7 +174,8 @@ class AssetCollectionTest extends \PHPUnit_Framework_TestCase
         $coll = new AssetCollection(array($asset), array(), null, $vars);
         $coll->setValues(array('locale' => 'en'));
         try {
-            $coll->getLastModified();
+            $ret = $coll->getLastModified();
+            $this->assertTrue(is_int($ret) || null === $ret);
         } catch (\InvalidArgumentException $e) {
             $this->fail("->getLastModified() shouldn't fail for assets with vars");
         }
@@ -309,7 +310,7 @@ class AssetCollectionTest extends \PHPUnit_Framework_TestCase
 
     public function testRemoveInvalidLeaf()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->expectException('\InvalidArgumentException');
 
         $coll = new AssetCollection();
         $coll->removeLeaf(new StringAsset('asdf'));
@@ -337,7 +338,7 @@ class AssetCollectionTest extends \PHPUnit_Framework_TestCase
 
     public function testReplaceInvalidLeaf()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->expectException('\InvalidArgumentException');
 
         $coll = new AssetCollection();
         $coll->replaceLeaf(new StringAsset('foo'), new StringAsset('bar'));

@@ -13,7 +13,7 @@ namespace Assetic\Test\Filter;
 
 use Assetic\Filter\FilterCollection;
 
-class FilterCollectionTest extends \PHPUnit_Framework_TestCase
+class FilterCollectionTest extends \PHPUnit\Framework\TestCase
 {
     public function testInterface()
     {

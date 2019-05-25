@@ -17,7 +17,7 @@ use Assetic\Filter\PhpCssEmbedFilter;
 /**
  * @group integration
  */
-class PhpCssEmbedFilterTest extends \PHPUnit_Framework_TestCase
+class PhpCssEmbedFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {

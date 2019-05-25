@@ -16,7 +16,7 @@ use Assetic\Cache\ApcCache;
 /**
  * @group integration
  */
-class ApcCacheTest extends \PHPUnit_Framework_TestCase
+class ApcCacheTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {

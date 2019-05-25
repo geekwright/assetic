@@ -16,7 +16,7 @@ use Assetic\Asset\FileAsset;
 use Assetic\Asset\StringAsset;
 use Assetic\Filter\SassphpFilter;
 
-class SassphpFilterTest extends \PHPUnit_Framework_TestCase
+class SassphpFilterTest extends \PHPUnit\Framework\TestCase
 {
     private $filter;
 

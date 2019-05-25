@@ -13,9 +13,10 @@ namespace Assetic\Test\Factory;
 
 use Assetic\Factory\LazyAssetManager;
 
-class LazyAssetManagerTest extends \PHPUnit_Framework_TestCase
+class LazyAssetManagerTest extends \PHPUnit\Framework\TestCase
 {
     private $factory;
+    /** @var LazyAssetManager */
     private $am;
 
     protected function setUp()
@@ -82,7 +83,7 @@ class LazyAssetManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testGetResourcesEmpty()
     {
-        $this->am->getResources();
+        $this->assertIsArray($this->am->getResources());
     }
 
     public function testSetFormula()

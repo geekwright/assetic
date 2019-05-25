@@ -13,7 +13,7 @@ namespace Assetic\Test\Cache;
 
 use Assetic\Cache\ExpiringCache;
 
-class ExpiringCacheTest extends \PHPUnit_Framework_TestCase
+class ExpiringCacheTest extends \PHPUnit\Framework\TestCase
 {
     private $inner;
     private $lifetime;

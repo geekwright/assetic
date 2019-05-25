@@ -8,6 +8,7 @@ use Assetic\Util\FilesystemUtils;
 use Symfony\Component\Process\Process;
 
 /**
+ * react-tools is deprecated. For more information, visit https://fb.me/react-tools-deprecated
  * Compiles JSX (for use with React) into JavaScript.
  *
  * @link   http://facebook.github.io/react/docs/jsx-in-depth.html

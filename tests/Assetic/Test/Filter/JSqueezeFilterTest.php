@@ -17,7 +17,7 @@ use Assetic\Filter\JSqueezeFilter;
 /**
  * @group integration
  */
-class JSqueezeFilterTest extends \PHPUnit_Framework_TestCase
+class JSqueezeFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {

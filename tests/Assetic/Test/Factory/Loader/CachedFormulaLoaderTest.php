@@ -13,7 +13,7 @@ namespace Assetic\Test\Factory\Loader;
 
 use Assetic\Factory\Loader\CachedFormulaLoader;
 
-class CachedFormulaLoaderTest extends \PHPUnit_Framework_TestCase
+class CachedFormulaLoaderTest extends \PHPUnit\Framework\TestCase
 {
     protected $loader;
     protected $configCache;

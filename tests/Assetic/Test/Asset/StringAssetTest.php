@@ -13,7 +13,7 @@ namespace Assetic\Test\Asset;
 
 use Assetic\Asset\StringAsset;
 
-class StringAssetTest extends \PHPUnit_Framework_TestCase
+class StringAssetTest extends \PHPUnit\Framework\TestCase
 {
     public function testInterface()
     {

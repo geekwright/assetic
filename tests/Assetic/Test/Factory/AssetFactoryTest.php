@@ -14,7 +14,7 @@ namespace Assetic\Test\Factory;
 use Assetic\Asset\AssetCollection;
 use Assetic\Factory\AssetFactory;
 
-class AssetFactoryTest extends \PHPUnit_Framework_TestCase
+class AssetFactoryTest extends \PHPUnit\Framework\TestCase
 {
     private $am;
     private $fm;
@@ -39,7 +39,7 @@ class AssetFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testNoAssetManagerReference()
     {
-        $this->setExpectedException('LogicException', 'There is no asset manager.');
+        $this->expectException('\LogicException', 'There is no asset manager.');
 
         $factory = new AssetFactory('.');
         $factory->createAsset(array('@foo'));
@@ -53,7 +53,7 @@ class AssetFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testNoFilterManager()
     {
-        $this->setExpectedException('LogicException', 'There is no filter manager.');
+        $this->expectException('\LogicException', 'There is no filter manager.');
 
         $factory = new AssetFactory('.');
         $factory->createAsset(array('foo'), array('foo'));
@@ -141,7 +141,7 @@ class AssetFactoryTest extends \PHPUnit_Framework_TestCase
 
     public function testInvalidFilter()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->expectException('\InvalidArgumentException');
 
         $this->fm->expects($this->once())
             ->method('get')

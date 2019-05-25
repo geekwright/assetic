@@ -13,7 +13,7 @@ namespace Assetic\Test;
 
 use Assetic\AssetManager;
 
-class AssetManagerTest extends \PHPUnit_Framework_TestCase
+class AssetManagerTest extends \PHPUnit\Framework\TestCase
 {
     /** @var AssetManager */
     private $am;
@@ -32,7 +32,7 @@ class AssetManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testGetInvalidAsset()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->expectException('\InvalidArgumentException');
         $this->am->get('foo');
     }
 
@@ -47,7 +47,7 @@ class AssetManagerTest extends \PHPUnit_Framework_TestCase
 
     public function testInvalidName()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->expectException('\InvalidArgumentException');
 
         $this->am->set('@foo', $this->getMockBuilder('Assetic\\Asset\\AssetInterface')->getMock());
     }

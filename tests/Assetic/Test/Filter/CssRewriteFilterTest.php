@@ -14,7 +14,7 @@ namespace Assetic\Test\Filter;
 use Assetic\Asset\StringAsset;
 use Assetic\Filter\CssRewriteFilter;
 
-class CssRewriteFilterTest extends \PHPUnit_Framework_TestCase
+class CssRewriteFilterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider provideUrls
@@ -135,6 +135,7 @@ class CssRewriteFilterTest extends \PHPUnit_Framework_TestCase
         $filter->filterDump($asset);
 
         // no error is thrown
+        $this->assertIsString($asset->getContent());
     }
 
     public function testEmptyUrl()
@@ -147,5 +148,6 @@ class CssRewriteFilterTest extends \PHPUnit_Framework_TestCase
         $filter->filterDump($asset);
 
         // no error is thrown
+        $this->assertIsString($asset->getContent());
     }
 }

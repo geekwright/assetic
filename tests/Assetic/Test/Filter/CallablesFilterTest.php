@@ -15,7 +15,7 @@ use Assetic\Asset\StringAsset;
 use Assetic\Filter\CallablesFilter;
 use Assetic\Factory\AssetFactory;
 
-class CallablesFilterTest extends \PHPUnit_Framework_TestCase
+class CallablesFilterTest extends \PHPUnit\Framework\TestCase
 {
     public function testInterface()
     {

@@ -14,7 +14,7 @@ namespace Assetic\Test\Asset;
 use Assetic\Asset\AssetReference;
 use Assetic\Asset\StringAsset;
 
-class AssetReferenceTest extends \PHPUnit_Framework_TestCase
+class AssetReferenceTest extends \PHPUnit\Framework\TestCase
 {
     private $am;
     private $ref;

@@ -13,7 +13,7 @@ namespace Assetic\Test\Util;
 
 use Assetic\Util\LessUtils;
 
-class LessUtilsTest extends \PHPUnit_Framework_TestCase
+class LessUtilsTest extends \PHPUnit\Framework\TestCase
 {
     public function testFilterUrls()
     {

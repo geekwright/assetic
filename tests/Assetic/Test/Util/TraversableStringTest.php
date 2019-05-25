@@ -13,7 +13,7 @@ namespace Assetic\Test\Util;
 
 use Assetic\Util\TraversableString;
 
-class TraversableStringTest extends \PHPUnit_Framework_TestCase
+class TraversableStringTest extends \PHPUnit\Framework\TestCase
 {
     public function testString()
     {

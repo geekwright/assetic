@@ -13,7 +13,7 @@ namespace Assetic\Test\Asset;
 
 use Assetic\Asset\HttpAsset;
 
-class HttpAssetTest extends \PHPUnit_Framework_TestCase
+class HttpAssetTest extends \PHPUnit\Framework\TestCase
 {
     const JQUERY = 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js';
 
@@ -38,14 +38,14 @@ class HttpAssetTest extends \PHPUnit_Framework_TestCase
 
     public function testMalformedUrl()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->expectException('\InvalidArgumentException');
 
         new HttpAsset(__FILE__);
     }
 
     public function testInvalidUrl()
     {
-        $this->setExpectedException('RuntimeException');
+        $this->expectException('\RuntimeException');
 
         $asset = new HttpAsset('http://invalid.com/foobar');
         $asset->load();

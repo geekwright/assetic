@@ -13,7 +13,7 @@ namespace Assetic\Test\Filter\Yui;
 
 use Assetic\Filter\Yui\CssCompressorFilter;
 
-class CssCompressorFilterTest extends \PHPUnit_Framework_TestCase
+class CssCompressorFilterTest extends \PHPUnit\Framework\TestCase
 {
     public function testInterface()
     {

@@ -14,7 +14,7 @@ namespace Assetic\Test\Asset;
 use Assetic\Asset\GlobAsset;
 use Assetic\Util\VarUtils;
 
-class GlobAssetTest extends \PHPUnit_Framework_TestCase
+class GlobAssetTest extends \PHPUnit\Framework\TestCase
 {
     public function testInterface()
     {

@@ -17,7 +17,7 @@ use Assetic\Filter\PackagerFilter;
 /**
  * @group integration
  */
-class PackagerFilterTest extends \PHPUnit_Framework_TestCase
+class PackagerFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {

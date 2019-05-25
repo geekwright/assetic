@@ -19,7 +19,7 @@ use Assetic\Filter\ScssphpFilter;
 /**
  * @group integration
  */
-class ScssphpFilterTest extends \PHPUnit_Framework_TestCase
+class ScssphpFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {
@@ -90,10 +90,8 @@ EOF;
 
     public function testCompassExtensionCanBeDisabled()
     {
-        $this->setExpectedExceptionRegExp(
-            'Exception',
-            '/^Undefined mixin box-shadow:.*line:* 4$/'
-        );
+        $this->expectException("Exception");
+        $this->expectExceptionMessageRegExp('/^Undefined mixin box-shadow:.*line:* 4$/');
 
         $asset = new FileAsset(__DIR__.'/fixtures/sass/main_compass.scss');
         $asset->load();

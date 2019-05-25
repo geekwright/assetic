@@ -15,7 +15,7 @@ use Assetic\Asset\FileAsset;
 use Assetic\Filter\CssImportFilter;
 use Assetic\Filter\CssRewriteFilter;
 
-class CssImportFilterTest extends \PHPUnit_Framework_TestCase
+class CssImportFilterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider getFilters

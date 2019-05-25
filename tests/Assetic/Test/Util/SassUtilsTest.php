@@ -13,7 +13,7 @@ namespace Assetic\Test\Util;
 
 use Assetic\Util\SassUtils;
 
-class SassUtilsTest extends \PHPUnit_Framework_TestCase
+class SassUtilsTest extends \PHPUnit\Framework\TestCase
 {
     public function testExtractImports()
     {

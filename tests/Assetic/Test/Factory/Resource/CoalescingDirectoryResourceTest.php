@@ -14,7 +14,7 @@ namespace Assetic\Test\Factory\Resource;
 use Assetic\Factory\Resource\CoalescingDirectoryResource;
 use Assetic\Factory\Resource\DirectoryResource;
 
-class CoalescingDirectoryResourceTest extends \PHPUnit_Framework_TestCase
+class CoalescingDirectoryResourceTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @test

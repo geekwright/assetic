@@ -16,7 +16,7 @@ use Assetic\Cache\ArrayCache;
 /**
  * @group integration
  */
-class ArrayCacheTest extends \PHPUnit_Framework_TestCase
+class ArrayCacheTest extends \PHPUnit\Framework\TestCase
 {
     public function testCache()
     {

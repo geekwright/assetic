@@ -17,7 +17,7 @@ use Assetic\Filter\CssCacheBustingFilter;
  * @package Assetic\Test\Filter
  * @author Maximilian Reichel <info@phramz.com>
  */
-class CssCacheBustingFilterTest extends \PHPUnit_Framework_TestCase
+class CssCacheBustingFilterTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @dataProvider provideUrls

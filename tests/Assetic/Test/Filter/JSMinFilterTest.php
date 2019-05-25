@@ -17,7 +17,7 @@ use Assetic\Filter\JSMinFilter;
 /**
  * @group integration
  */
-class JSMinFilterTest extends \PHPUnit_Framework_TestCase
+class JSMinFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {
