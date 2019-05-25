@@ -75,9 +75,8 @@ EOF;
 
     public function testCompressImport()
     {
-        // was .foo{color:blue}.foo{color:red}
         $expected = <<<EOF
-.foo{color:#00f}.foo{color:#f00}
+.foo{color:blue}.foo{color:red}
 EOF;
 
         $asset = new FileAsset(__DIR__.'/fixtures/less/main.less');

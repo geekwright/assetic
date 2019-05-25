@@ -11,6 +11,8 @@
     "postcss-cli": "*",
     "roole": "*",
     "react-tools": "*",
-    "clean-css": "2.2.23"
+    "clean-css": "2.2.23",
+    "stylus": "*",
+    "nib": "*"
   }
 }
