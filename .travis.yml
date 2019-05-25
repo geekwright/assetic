@@ -14,22 +14,18 @@ cache:
         - $HOME/.composer/cache/files
 
 php:
-    - 5.3
-    - 5.4
-    - 5.5
-    - 5.6
-    - 7.0
     - 7.1
-    - hhvm
+    - 7.2
+    - 7.3
+    - 7.4snapshot
 
 matrix:
     allow_failures:
-        - php: hhvm
-        - php: 7.1
+        - php: 7.4snapshot
     include:
-        - php: 5.3
+        - php: 7.1
           env: COMPOSER_FLAGS='--prefer-lowest --prefer-stable' SYMFONY_DEPRECATIONS_HELPER=weak
-        - php: 5.6
+        - php: 7.3
           env: DEPENDENCIES=dev
 
 before_script:
@@ -59,7 +55,7 @@ before_script:
 
     # ruby deps
     - bundle install
-
+    - export SPROCKETS_LIB="$(bundle show sprockets)/lib/"
     # other deps
 
     - wget -q http://storage.googleapis.com/dart-archive/channels/stable/release/latest/sdk/dartsdk-linux-x64-release.zip && unzip dartsdk-linux-x64-release.zip && mv dart-sdk vendor
