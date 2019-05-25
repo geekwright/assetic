@@ -65,21 +65,22 @@ class UglifyJs2FilterTest extends FilterTestCase
 
     public function testDefines()
     {
-        $this->filter->setDefines(array('DEBUG=false'));
+        $this->filter->setDefines(array('DEBUG=true'));
+        //$this->filter->setCompress(false);
         $this->filter->filterDump($this->asset);
 
-        $this->assertContains('DEBUG', $this->asset->getContent());
+        //$this->assertContains('DEBUG', $this->asset->getContent());
         $this->assertContains('console.log', $this->asset->getContent());
     }
 
     public function testMutiplieDefines()
     {
-        $this->filter->setDefines(array('DEBUG=false', 'FOO=2'));
+        $this->filter->setDefines(array('DEBUG=true', 'FOO=42'));
         $this->filter->filterDump($this->asset);
 
-        $this->assertContains('DEBUG', $this->asset->getContent());
-        $this->assertContains('FOO', $this->asset->getContent());
-        $this->assertContains('Array(FOO,2,3,4)', $this->asset->getContent());
+        //$this->assertContains('DEBUG', $this->asset->getContent());
+        //$this->assertContains('FOO', $this->asset->getContent());
+        $this->assertContains('Array(42,2,3,4)', $this->asset->getContent());
         $this->assertContains('console.log', $this->asset->getContent());
     }
 
