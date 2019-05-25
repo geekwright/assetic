@@ -24,6 +24,9 @@ class EmberPrecompileFilterTest extends FilterTestCase
 
     protected function setUp()
     {
+        // perhaps supporting ember-cli would be a good idea?
+        $this->markTestSkipped('`ember-precompile` is no longer viable or maintained.');
+
         $emberBin = $this->findExecutable('ember-precompile', 'EMBERPRECOMPILE_BIN');
         $nodeBin = $this->findExecutable('node', 'NODE_BIN');
 

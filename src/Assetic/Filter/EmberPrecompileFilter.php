@@ -17,6 +17,9 @@ use Assetic\Util\FilesystemUtils;
 use Symfony\Component\Process\Process;
 
 /**
+ * `ember-precompile` is no longer viable or maintained.
+ * perhaps supporting ember-cli would be a good idea?
+ *
  * Precompiles Handlebars templates for use in the Ember.js framework. This filter
  * requires that the npm package ember-precompile be installed. You can find this
  * package at https://github.com/gabrielgrant/node-ember-precompile.
