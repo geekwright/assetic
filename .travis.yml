@@ -51,8 +51,8 @@ before_script:
     - wget https://github.com/downloads/nzakas/cssembed/cssembed-0.4.5.jar && mv cssembed-0.4.5.jar vendor/java
     - export CSSEMBED_JAR=vendor/java/cssembed-0.4.5.jar
 
-    - wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.zip && unzip yuicompressor-2.4.7.zip -d vendor/java
-    - export YUI_COMPRESSOR_JAR=vendor/java/yuicompressor-2.4.7/build/yuicompressor-2.4.7.jar
+    - wget https://github.com/yui/yuicompressor/releases/download/v2.4.8/yuicompressor-2.4.8.jar && mv yuicompressor-2.4.8.jar vendor/java
+    - export YUI_COMPRESSOR_JAR=vendor/java/yuicompressor-2.4.8.jar
 
     # ruby deps
     - bundle install
