@@ -31,7 +31,7 @@
         "symfony/phpunit-bridge": "~4.0",
         "twig/twig": "~2.0",
         "yfix/packager": "dev-master",
-        "phpunit/phpunit": "~7.0",
+        "phpunit/phpunit": "^7.5",
         "roave/security-advisories": "dev-master"
     },
     "suggest": {
