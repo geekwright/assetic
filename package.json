@@ -1,19 +1,16 @@
 {
   "devDependencies": {
     "uglifycss": "*",
-    "coffee-script": "*",
-    "stylus": "*",
-    "nib": "*",
-    "ember-precompile": "*",
+    "coffeescript": "*",
     "typescript": "*",
     "less": "*",
     "handlebars": "*",
     "uglify-js": "*",
     "autoprefixer": "*",
-    "autoprefixer-5": "^1.x",
     "autoprefixer-cli": "*",
+    "postcss-cli": "*",
     "roole": "*",
     "react-tools": "*",
-    "clean-css": "*"
+    "clean-css": "2.2.23"
   }
 }
