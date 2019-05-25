@@ -23,7 +23,7 @@ class TwigResource implements ResourceInterface
     private $loader;
     private $name;
 
-    public function __construct(\Twig_LoaderInterface $loader, $name)
+    public function __construct(\Twig\Loader\LoaderInterface $loader, $name)
     {
         $this->loader = $loader;
         $this->name = $name;
@@ -35,7 +35,7 @@ class TwigResource implements ResourceInterface
             return method_exists($this->loader, 'getSourceContext')
                 ? $this->loader->getSourceContext($this->name)->getCode()
                 : $this->loader->getSource($this->name);
-        } catch (\Twig_Error_Loader $e) {
+        } catch (\Twig\Error\LoaderError $e) {
             return '';
         }
     }
@@ -44,7 +44,7 @@ class TwigResource implements ResourceInterface
     {
         try {
             return $this->loader->isFresh($this->name, $timestamp);
-        } catch (\Twig_Error_Loader $e) {
+        } catch (\Twig\Error\LoaderError $e) {
             return false;
         }
     }

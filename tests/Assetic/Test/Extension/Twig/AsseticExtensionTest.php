@@ -16,7 +16,7 @@ use Assetic\Extension\Twig\AsseticExtension;
 use Assetic\Asset\AssetCollection;
 use Assetic\Asset\FileAsset;
 
-class AsseticExtensionTest extends \PHPUnit_Framework_TestCase
+class AsseticExtensionTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject|\Assetic\AssetManager
@@ -34,7 +34,7 @@ class AsseticExtensionTest extends \PHPUnit_Framework_TestCase
     private $factory;
 
     /**
-     * @var \Twig_Environment
+     * @var \Twig\Environment
      */
     private $twig;
 
@@ -45,7 +45,7 @@ class AsseticExtensionTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        if (!class_exists('Twig_Environment')) {
+        if (!class_exists('\Twig\Environment')) {
             $this->markTestSkipped('Twig is not installed.');
         }
 
@@ -58,7 +58,7 @@ class AsseticExtensionTest extends \PHPUnit_Framework_TestCase
         $this->factory->setAssetManager($this->am);
         $this->factory->setFilterManager($this->fm);
 
-        $this->twig = new \Twig_Environment(new \Twig_Loader_Filesystem(__DIR__.'/templates'));
+        $this->twig = new \Twig\Environment(new \Twig\Loader\FilesystemLoader(__DIR__.'/templates'));
         $this->twig->addExtension(new AsseticExtension($this->factory, array(), $this->valueSupplier));
     }
 
@@ -203,7 +203,7 @@ class AsseticExtensionTest extends \PHPUnit_Framework_TestCase
             ->with('some_filter')
             ->will($this->returnValue($filter));
 
-        $this->twig = new \Twig_Environment(new \Twig_Loader_Filesystem(__DIR__.'/templates'));
+        $this->twig = new \Twig\Environment(new \Twig\Loader\FilesystemLoader(__DIR__.'/templates'));
         $this->twig->addExtension(new AsseticExtension($this->factory, array(
             'some_func' => array(
                 'filter' => 'some_filter',

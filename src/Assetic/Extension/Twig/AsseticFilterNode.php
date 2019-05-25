@@ -11,9 +11,9 @@
 
 namespace Assetic\Extension\Twig;
 
-class AsseticFilterNode extends \Twig_Node_Expression_Function
+class AsseticFilterNode extends \Twig\Node\Expression\FunctionExpression
 {
-    protected function compileCallable(\Twig_Compiler $compiler)
+    protected function compileCallable(\Twig\Compiler $compiler)
     {
         $compiler->raw(sprintf('$this->env->getExtension(\'Assetic\\Extension\\Twig\\AsseticExtension\')->getFilterInvoker(\'%s\')->invoke', $this->getAttribute('name')));
 

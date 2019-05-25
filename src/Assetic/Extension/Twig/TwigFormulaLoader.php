@@ -25,7 +25,7 @@ class TwigFormulaLoader implements FormulaLoaderInterface
     private $twig;
     private $logger;
 
-    public function __construct(\Twig_Environment $twig, LoggerInterface $logger = null)
+    public function __construct(\Twig\Environment $twig, LoggerInterface $logger = null)
     {
         $this->twig = $twig;
         $this->logger = $logger;
@@ -54,7 +54,7 @@ class TwigFormulaLoader implements FormulaLoaderInterface
      *
      * @return array An array of asset formulae indexed by name
      */
-    private function loadNode(\Twig_Node $node)
+    private function loadNode(\Twig\Node\Node $node)
     {
         $formulae = array();
 

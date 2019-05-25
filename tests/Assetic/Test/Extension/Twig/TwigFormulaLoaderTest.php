@@ -15,7 +15,7 @@ use Assetic\Factory\AssetFactory;
 use Assetic\Extension\Twig\AsseticExtension;
 use Assetic\Extension\Twig\TwigFormulaLoader;
 
-class TwigFormulaLoaderTest extends \PHPUnit_Framework_TestCase
+class TwigFormulaLoaderTest extends \PHPUnit\Framework\TestCase
 {
     private $am;
     private $fm;
@@ -26,7 +26,7 @@ class TwigFormulaLoaderTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        if (!class_exists('Twig_Environment')) {
+        if (!class_exists('\Twig\Environment')) {
             $this->markTestSkipped('Twig is not installed.');
         }
 
@@ -37,7 +37,7 @@ class TwigFormulaLoaderTest extends \PHPUnit_Framework_TestCase
         $factory->setAssetManager($this->am);
         $factory->setFilterManager($this->fm);
 
-        $twig = new \Twig_Environment(new \Twig_Loader_Array(array()));
+        $twig = new \Twig\Environment(new \Twig\Loader\ArrayLoader(array()));
         $twig->addExtension(new AsseticExtension($factory, array(
             'some_func' => array(
                 'filter' => 'some_filter',

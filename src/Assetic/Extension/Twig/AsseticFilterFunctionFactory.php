@@ -1,0 +1,44 @@
+<?php
+
+/*
+ * This file is part of the Assetic package, an OpenSky project.
+ *
+ * (c) 2010-2014 OpenSky Project Inc
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Assetic\Extension\Twig;
+
+use Twig\TwigFunction;
+
+/**
+ * Class AsseticFilterFunctionFactory
+ *
+ * @package Assetic\Extension\Twig
+ */
+class AsseticFilterFunctionFactory
+{
+    /**
+     * @param string   $name    function name
+     * @param string[] $options options
+     *
+     * @return \Twig\TwigFunction
+     */
+    public static function create(string $name, array $options = []): TwigFunction
+    {
+        return new TwigFunction(
+            $name,
+            null,
+            array_merge(
+                $options,
+                [
+                    'needs_environment' => false,
+                    'needs_context' => false,
+                    'node_class' => \Assetic\Extension\Twig\AsseticFilterNode::class,
+                ]
+            )
+        );
+    }
+}
