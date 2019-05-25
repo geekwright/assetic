@@ -14,6 +14,7 @@ namespace Assetic\Filter\Sass;
 use Assetic\Asset\AssetInterface;
 use Assetic\Exception\FilterException;
 use Assetic\Util\FilesystemUtils;
+use Symfony\Component\Process\Process;
 
 /**
  * Loads SASS files.
@@ -111,7 +112,7 @@ class SassFilter extends BaseSassFilter
             $sassProcessArgs = array_merge(explode(' ', $this->rubyPath), $sassProcessArgs);
         }
 
-        $commandline =$sassProcessArgs);
+        $commandline = $sassProcessArgs;
 
         if ($dir = $asset->getSourceDirectory()) {
             array_push($commandline, '--load-path', $dir);
