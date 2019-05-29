@@ -35,7 +35,6 @@ before_script:
     - composer update $COMPOSER_FLAGS
 
     # node deps
-    - npm install uglify-js@1 && mkdir -p vendor/uglifyjs && mv node_modules vendor/uglifyjs
     - npm install
     - export NODE_VERSION=$(node -v | egrep -o "[0-9]+.[0-9]+.[0-9]+")
     - export UGLIFYJS_BIN=vendor/uglifyjs/node_modules/uglify-js/bin/uglifyjs

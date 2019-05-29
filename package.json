@@ -5,7 +5,7 @@
     "typescript": "*",
     "less": "*",
     "handlebars": "*",
-    "uglify-js": "*",
+    "uglify-js": "2.x",
     "autoprefixer": "*",
     "autoprefixer-cli": "*",
     "postcss-cli": "*",

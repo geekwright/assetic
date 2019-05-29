@@ -47,8 +47,15 @@ class UglifyJs2FilterTest extends FilterTestCase
         if (isset($_SERVER['NODE_PATH'])) {
             $process->setEnv(array('NODE_PATH' => $_SERVER['NODE_PATH']));
         }
-        if (0 !== $process->run()) {
+        $rc = $process->run();
+        if (0 !== $rc) {
             $this->markTestSkipped('Incorrect version of UglifyJs');
+        }
+        if ($rc === 0) {
+            $out = $process->getOutput();
+            if (false === strstr($out, ' 2.')) {
+                $this->markTestSkipped('Incorrect version of UglifyJs');
+            }
         }
 
         $this->asset = new FileAsset(__DIR__.'/fixtures/uglifyjs/script.js');
@@ -75,12 +82,12 @@ class UglifyJs2FilterTest extends FilterTestCase
 
     public function testMutiplieDefines()
     {
-        $this->filter->setDefines(array('DEBUG=true', 'FOO=42'));
+        $this->filter->setDefines(array('DEBUG=true', 'FOO=2'));
         $this->filter->filterDump($this->asset);
 
-        //$this->assertContains('DEBUG', $this->asset->getContent());
-        //$this->assertContains('FOO', $this->asset->getContent());
-        $this->assertContains('Array(42,2,3,4)', $this->asset->getContent());
+        $this->assertContains('DEBUG', $this->asset->getContent());
+        $this->assertContains('FOO', $this->asset->getContent());
+        $this->assertContains('Array(FOO,2,3,4)', $this->asset->getContent());
         $this->assertContains('console.log', $this->asset->getContent());
     }
 
