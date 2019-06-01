@@ -7,7 +7,9 @@
 > tests in travis-ci.org
 >
 > My sincere hope is that Assetic will be reborn and make this fork unnecessary.
-> Until then I use: `composer require "geekwright/assetic-fork:2.*"`
+> Until then I use: 
+>
+> `composer require "geekwright/assetic-fork:2.*"`
 
 # Assetic (original README)
 
