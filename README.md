@@ -1,4 +1,15 @@
-# Assetic [![Build Status](https://travis-ci.org/kriswallsmith/assetic.png?branch=master)](https://travis-ci.org/kriswallsmith/assetic) ![project status](http://stillmaintained.com/kriswallsmith/assetic.png) #
+# Assetic [![Build Status](https://travis-ci.org/geekwright/assetic.png?branch=master)](https://travis-ci.org/geekwright/assetic)
+
+> This is a fork of [Assetic](https://github.com/kriswallsmith/assetic)
+> 
+> Assetic is a wonderful product, but sadly, it is lagging behind the PHP ecosystem.
+> This fork is intended for use in PHP >7.1, depends on symfony/process 4, and passes 
+> tests in travis-ci.org
+>
+> My sincere hope is that Assetic will be reborn and make this fork unnecessary.
+> Until then I use: `composer require "geekwright/assetic-fork:2.*"`
+
+# Assetic (original README)
 
 Assetic is an asset management framework for PHP.
 
