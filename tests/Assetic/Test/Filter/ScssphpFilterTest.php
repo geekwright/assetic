@@ -23,8 +23,8 @@ class ScssphpFilterTest extends \PHPUnit\Framework\TestCase
 {
     protected function setUp()
     {
-        if (!class_exists('Leafo\ScssPhp\Compiler')) {
-            $this->markTestSkipped('leafo/scssphp is not installed');
+        if (!class_exists('ScssPhp\ScssPhp\Compiler')) {
+            $this->markTestSkipped('scssphp/scssphp is not installed');
         }
     }
 
@@ -91,7 +91,7 @@ EOF;
     public function testCompassExtensionCanBeDisabled()
     {
         $this->expectException("Exception");
-        $this->expectExceptionMessageRegExp('/^Undefined mixin box-shadow:.*line:* 4$/');
+        $this->expectExceptionMessageRegExp('/^Undefined mixin box-shadow:/');
 
         $asset = new FileAsset(__DIR__.'/fixtures/sass/main_compass.scss');
         $asset->load();
@@ -129,7 +129,7 @@ EOF;
         $actual->load();
 
         $filter = $this->getFilter();
-        $filter->setFormatter('Leafo\ScssPhp\Formatter\Compressed');
+        $filter->setFormatter('ScssPhp\ScssPhp\Formatter\Compressed');
         $filter->filterLoad($actual);
 
         $this->assertRegExp(
